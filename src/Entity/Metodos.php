@@ -42,6 +42,11 @@ class Metodos
 
         return $this;
     }
+    
+    public function __toString()
+    {
+        return $this->getTipo();
+    }
 
     /**
      * @return Collection<int, Compras>

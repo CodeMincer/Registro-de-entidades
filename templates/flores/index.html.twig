@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Flores index{% endblock %}
+
+{% block body %}
+    <h1>Flores index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Tipo</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for flore in flores %}
+            <tr>
+                <td>{{ flore.id }}</td>
+                <td>{{ flore.tipo }}</td>
+                <td>
+                    <a href="{{ path('app_flores_show', {'id': flore.id}) }}">show</a>
+                    <a href="{{ path('app_flores_edit', {'id': flore.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_flores_new') }}">Create new</a>
+{% endblock %}
