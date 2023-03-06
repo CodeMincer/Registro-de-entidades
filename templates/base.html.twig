@@ -21,6 +21,12 @@
     </head>
     <body>
         <div class="container">
+            <div class="d-flex">
+                <a href="{{ path('app_clientes_index') }}" class="btn btn-outline-primary">Clientes</a>
+                <a href="{{ path('app_compras_index') }}" class="btn btn-outline-primary">Compras</a>
+                <a href="{{ path('app_productos_index') }}" class="btn btn-outline-primary">Productos</a>
+                <a href="{{ path('app_metodos_index') }}" class="btn btn-outline-primary">Métodos de Pago</a>
+            </div>
             {% block body %}{% endblock %}
         </div>
     </body>

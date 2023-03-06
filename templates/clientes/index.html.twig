@@ -29,6 +29,7 @@
                 <td>
                     <a href="{{ path('app_clientes_show', {'id': cliente.id}) }}" class="btn btn-primary">Ver</a>
                     <a href="{{ path('app_clientes_edit', {'id': cliente.id}) }}" class="btn btn-primary">Editar</a>
+                    <a href="{{ path('app_compras_new') }}" class="btn btn-primary">Agregar compra</a>
                 </td>
             </tr>
         {% else %}

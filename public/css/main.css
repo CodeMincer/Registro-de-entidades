@@ -64,8 +64,12 @@ h1 {
 table tbody tr td > .btn {
     margin-right: 12px;
 }
-.btn.btn-primary {
+.btn.btn-primary,
+.btn.btn-outline-primary {
     margin-right: 15px;
+}
+.btn.btn-info {
+    margin-bottom: 35px;
 }
 .d-flex {
     margin-top: 10px;

@@ -9,6 +9,10 @@
         <thead>
             <tr>
                 <th>Id</th>
+                <th>Cliente</th>
+                <th>Producto</th>
+                <th>Método de Pago</th>
+                <th>Total</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -16,6 +20,10 @@
         {% for compra in compras %}
             <tr>
                 <td>{{ compra.id }}</td>
+                <td>{{ compra.cliente }}</td>
+                <td>{{ compra.producto }}</td>
+                <td>{{ compra.metodo }}</td>
+                <td>{{ compra.producto.precio }}</td>
                 <td>
                     <a href="{{ path('app_compras_show', {'id': compra.id}) }}" class="btn btn-primary">Ver</a>
                     <a href="{{ path('app_compras_edit', {'id': compra.id}) }}" class="btn btn-primary">Editar</a>
