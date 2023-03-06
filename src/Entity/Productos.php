@@ -62,6 +62,12 @@ class Productos
 
         return $this;
     }
+
+    public function __call($Flores, $tipo_flores)
+    {
+        return $this->getTipoFlores();
+    }
+
     public function __toString()
     {
         return $this->getTipo();

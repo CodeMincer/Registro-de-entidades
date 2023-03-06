@@ -10,6 +10,7 @@
             <tr>
                 <th>Id</th>
                 <th>Tipo</th>
+                <th>Subtipo</th>
                 <th>Precio</th>
                 <th>Acciones</th>
             </tr>
@@ -19,6 +20,7 @@
             <tr>
                 <td>{{ producto.id }}</td>
                 <td>{{ producto.tipo }}</td>
+                <td>{{ producto.tipo_flores }}</td>
                 <td>{{ producto.precio }}</td>
                 <td>
                     <a href="{{ path('app_productos_show', {'id': producto.id}) }}" class="btn btn-primary">Ver</a>
