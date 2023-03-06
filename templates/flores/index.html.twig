@@ -3,9 +3,9 @@
 {% block title %}Flores index{% endblock %}
 
 {% block body %}
-    <h1>Flores index</h1>
+    <h1>Flores</h1>
 
-    <table class="table">
+    <table class="table table-dark table-striped">
         <thead>
             <tr>
                 <th>Id</th>
@@ -19,17 +19,17 @@
                 <td>{{ flore.id }}</td>
                 <td>{{ flore.tipo }}</td>
                 <td>
-                    <a href="{{ path('app_flores_show', {'id': flore.id}) }}">show</a>
-                    <a href="{{ path('app_flores_edit', {'id': flore.id}) }}">edit</a>
+                    <a href="{{ path('app_flores_show', {'id': flore.id}) }}" class="btn btn-primary">Ver</a>
+                    <a href="{{ path('app_flores_edit', {'id': flore.id}) }}" class="btn btn-primary">Editar</a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="3">no records found</td>
+                <td colspan="3">No se encontraron registros</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('app_flores_new') }}">Create new</a>
+    <a href="{{ path('app_flores_new') }}" class="btn btn-primary">Agregar</a>
 {% endblock %}

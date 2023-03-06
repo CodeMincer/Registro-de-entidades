@@ -1,15 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Compras index{% endblock %}
+{% block title %}Compras{% endblock %}
 
 {% block body %}
-    <h1>Compras index</h1>
+    <h1>Compras</h1>
 
-    <table class="table">
+    <table class="table table-dark table-striped">
         <thead>
             <tr>
                 <th>Id</th>
-                <th>actions</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -17,8 +17,8 @@
             <tr>
                 <td>{{ compra.id }}</td>
                 <td>
-                    <a href="{{ path('app_compras_show', {'id': compra.id}) }}">show</a>
-                    <a href="{{ path('app_compras_edit', {'id': compra.id}) }}">edit</a>
+                    <a href="{{ path('app_compras_show', {'id': compra.id}) }}" class="btn btn-primary">Ver</a>
+                    <a href="{{ path('app_compras_edit', {'id': compra.id}) }}" class="btn btn-primary">Editar</a>
                 </td>
             </tr>
         {% else %}
@@ -29,5 +29,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_compras_new') }}">Create new</a>
+    <a href="{{ path('app_compras_new') }}" class="btn btn-primary">Agregar</a>
 {% endblock %}

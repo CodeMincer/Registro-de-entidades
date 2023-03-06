@@ -1,11 +1,24 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Compras{% endblock %}
+{% block title %}Nueva compra{% endblock %}
 
 {% block body %}
-    <h1>Create new Compras</h1>
+    <h1>Nueva compra</h1>
 
     {{ include('compras/_form.html.twig') }}
+    <style>
+        form > div {
+            display: flex;
+            align-content: flex-start;
+            flex-direction: column-reverse;
+        }
+    </style>
 
-    <a href="{{ path('app_compras_index') }}">back to list</a>
+    <a href="{{ path('app_compras_index') }}" class="btn btn-secondary">Regresar</a>
+        <style>
+            a.btn.btn-secondary {
+                margin-top: 10px;
+            }
+        </style>
+        
 {% endblock %}

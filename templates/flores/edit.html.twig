@@ -1,13 +1,20 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Flores{% endblock %}
+{% block title %}Editar Flores{% endblock %}
 
 {% block body %}
-    <h1>Edit Flores</h1>
+    <h1>Editar item</h1>
 
-    {{ include('flores/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('flores/_form.html.twig', {'button_label': 'Actualizar'}) }}
 
-    <a href="{{ path('app_flores_index') }}">back to list</a>
-
+<div class="d-flex">
     {{ include('flores/_delete_form.html.twig') }}
+    <a href="{{ path('app_flores_index') }}"class="btn btn-secondary">Regresar</a>
+</div> 
+<style>
+    .d-flex {
+        margin-top: 10px;
+    }
+</style>
+    
 {% endblock %}
