@@ -6,19 +6,7 @@
     <h1>Nueva compra</h1>
 
     {{ include('compras/_form.html.twig') }}
-    <style>
-        form > div {
-            display: flex;
-            align-content: flex-start;
-            flex-direction: column-reverse;
-        }
-    </style>
 
     <a href="{{ path('app_compras_index') }}" class="btn btn-secondary">Regresar</a>
-        <style>
-            a.btn.btn-secondary {
-                margin-top: 10px;
-            }
-        </style>
         
 {% endblock %}

@@ -38,10 +38,5 @@
         <a href="{{ path('app_clientes_edit', {'id': cliente.id}) }}" class="btn btn-primary">Editar</a>
         {{ include('clientes/_delete_form.html.twig') }}
         <a href="{{ path('app_clientes_index') }}" class="btn btn-secondary">Regresar</a>
-        <style>
-            a.btn.btn-primary {
-                margin-right: 15px;
-            }
-        </style>
     </div>
 {% endblock %}

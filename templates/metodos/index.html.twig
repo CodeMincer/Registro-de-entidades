@@ -1,11 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Metodos index{% endblock %}
+{% block title %}Métodos index{% endblock %}
 
 {% block body %}
-    <h1>Metodos de pago</h1>
+    <h1>Métodos de pago</h1>
 
-    <table class="table">
+    <table class="table table-dark table-striped">
         <thead>
             <tr>
                 <th>Id</th>
@@ -19,8 +19,8 @@
                 <td>{{ metodo.id }}</td>
                 <td>{{ metodo.tipo }}</td>
                 <td>
-                    <a href="{{ path('app_metodos_show', {'id': metodo.id}) }}">Ver</a>
-                    <a href="{{ path('app_metodos_edit', {'id': metodo.id}) }}">Editar</a>
+                    <a href="{{ path('app_metodos_show', {'id': metodo.id}) }}" class="btn btn-primary">Ver</a>
+                    <a href="{{ path('app_metodos_edit', {'id': metodo.id}) }}" class="btn btn-primary">Editar</a>
                 </td>
             </tr>
         {% else %}
@@ -31,5 +31,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_metodos_new') }}">Agregar</a>
+    <a href="{{ path('app_metodos_new') }}" class="btn btn-primary">Agregar</a>
 {% endblock %}

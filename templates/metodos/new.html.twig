@@ -1,11 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Nuevo Metodo{% endblock %}
+{% block title %}Nuevo Método{% endblock %}
 
 {% block body %}
     <h1>Nuevo método de pago</h1>
 
     {{ include('metodos/_form.html.twig') }}
 
-    <a href="{{ path('app_metodos_index') }}">Regresar</a>
+    <a href="{{ path('app_metodos_index') }}" class="btn btn-secondary">Regresar</a>
 {% endblock %}

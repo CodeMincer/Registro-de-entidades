@@ -6,21 +6,9 @@
     <h1>Editar compra</h1>
 
     {{ include('compras/_form.html.twig', {'button_label': 'Actualizar'}) }}
-    <style>
-        form > div {
-            display: flex;
-            align-content: flex-start;
-            flex-direction: column-reverse;
-        }
-    </style>
 
 <div class="d-flex">
     {{ include('compras/_delete_form.html.twig') }}
     <a href="{{ path('app_compras_index') }}" class="btn btn-secondary">Regresar</a>
-    <style>
-        a.btn.btn-secondary {
-            margin-top: 10px;
-        }
-    </style>
 </div>
 {% endblock %}
