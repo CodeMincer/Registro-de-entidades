@@ -1,13 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Metodos{% endblock %}
+{% block title %}Editar Metodos{% endblock %}
 
 {% block body %}
-    <h1>Edit Metodos</h1>
+    <h1>Editar método</h1>
 
-    {{ include('metodos/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('metodos/_form.html.twig', {'button_label': 'Actualizar'}) }}
 
-    <a href="{{ path('app_metodos_index') }}">back to list</a>
+    <a href="{{ path('app_metodos_index') }}">Regresar</a>
 
     {{ include('metodos/_delete_form.html.twig') }}
 {% endblock %}

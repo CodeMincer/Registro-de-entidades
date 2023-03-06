@@ -3,14 +3,14 @@
 {% block title %}Metodos index{% endblock %}
 
 {% block body %}
-    <h1>Metodos index</h1>
+    <h1>Metodos de pago</h1>
 
     <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
                 <th>Tipo</th>
-                <th>actions</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -19,17 +19,17 @@
                 <td>{{ metodo.id }}</td>
                 <td>{{ metodo.tipo }}</td>
                 <td>
-                    <a href="{{ path('app_metodos_show', {'id': metodo.id}) }}">show</a>
-                    <a href="{{ path('app_metodos_edit', {'id': metodo.id}) }}">edit</a>
+                    <a href="{{ path('app_metodos_show', {'id': metodo.id}) }}">Ver</a>
+                    <a href="{{ path('app_metodos_edit', {'id': metodo.id}) }}">Editar</a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="3">no records found</td>
+                <td colspan="3">No se encontraron registro</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('app_metodos_new') }}">Create new</a>
+    <a href="{{ path('app_metodos_new') }}">Agregar</a>
 {% endblock %}
